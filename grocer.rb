@@ -35,11 +35,8 @@ def apply_coupons(cart, coupons)
   discount= {}
   cart.each do |item|
     item.each do |name, attributes|
-      binding.pry
       coupons.each do |coupon|
-
-
-        end
+binding.pry
       end
     end
   end
