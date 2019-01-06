@@ -38,6 +38,7 @@ def apply_coupons(cart, coupons)
       coupons.each do |coupon|
         if coupon[:item] == name
           discount["#{name} W/COUPON"][:price] = coupon[:cost]
+          binding.pry
         end
       end
     end
