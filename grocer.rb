@@ -1,3 +1,5 @@
+binding.pry
+
 def consolidate_cart(cart)
    cart.each do |item, attributes|
      binding.pry
