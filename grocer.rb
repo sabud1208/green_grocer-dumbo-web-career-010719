@@ -20,7 +20,7 @@ def consolidate_cart(cart)
      item.each do |name, attributes|
       if attributes[:count] == nil
         attributes[:count] = 1
-        new_hash[:name] = attributes
+        new_hash[name] = attributes
       else
         attributes[:count] += 1
       end
