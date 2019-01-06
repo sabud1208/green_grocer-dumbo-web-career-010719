@@ -36,7 +36,8 @@ def apply_coupons(cart, coupons)
   cart.each do |item|
     item.each do |name, attributes|
       coupons.each do |coupon|
-binding.pry
+        if coupon[:item] == name
+        end
       end
     end
   end
