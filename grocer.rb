@@ -33,6 +33,7 @@ def apply_coupons(cart, coupons)
   discount= {}
   cart.each do |item|
     item.each do |name, attributes|
+      binding.pry
     end
   end
 end
