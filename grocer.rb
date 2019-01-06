@@ -24,6 +24,7 @@ def consolidate_cart(cart)
         attributes[:count] += 1
    end
   end
+  new_hash
 end
 
 def apply_coupons(cart, coupons)
