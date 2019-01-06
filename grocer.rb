@@ -7,7 +7,6 @@ require "pry"
 def consolidate_cart(cart)
    cart.each do |item, attributes|
      item[:count]
-     binding.pry
    end
 end
 
