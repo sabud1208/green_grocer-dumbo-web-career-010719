@@ -35,9 +35,10 @@ def apply_coupons(cart, coupons)
   discount= {}
   cart.each do |item|
     item.each do |name, attributes|
+      binding.pry
       coupons.each do |coupon|
-        if coupon[:item] == name
-          puts "it worked"
+
+
         end
       end
     end
