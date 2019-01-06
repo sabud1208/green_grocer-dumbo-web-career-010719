@@ -43,6 +43,7 @@ def apply_coupons(cart, coupons)
           # we want to divide the count in the cart by the num in coupons
         # end
       else new_hash[item] = attributes
+        end
       end
     end
   end
