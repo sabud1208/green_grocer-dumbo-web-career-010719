@@ -23,6 +23,7 @@ def consolidate_cart(cart)
         new_hash[] = attributes
       else
         attributes[:count] += 1
+      end
    end
   end
   new_hash
