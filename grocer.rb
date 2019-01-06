@@ -36,8 +36,8 @@ def apply_coupons(cart, coupons)
   cart.each do |item|
     item.each do |name, attributes|
       coupons.each do |coupon|
-        if coupon.values == name
-          puts "it worked"
+        if coupon[:item] == name
+          
         end
       end
     end
