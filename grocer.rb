@@ -34,15 +34,12 @@ end
 def apply_coupons(cart, coupons)
   new_hash= {}
   cart.each do |item, attributes|
-    if coupons.empty? == false
-    # item.each do |name|
+    if coupons.any? == true
       coupons.each do |coupon|
         if coupon[:item] == item
           new_hash["#{item} W/COUPON"] = {:price => coupon[:cost], :count => attributes[:count] / coupon[:num], :clearance => attributes[:clearance]}
           new_hash[item]= {:count => attributes[:count] %= coupon[:num], :price => attributes[:price]}
-          # we want to divide the count in the cart by the num in coupons
-        # end
-      else new_hash[item] = attributes
+         else new_hash[item] = attributes
         end
       end
     end
