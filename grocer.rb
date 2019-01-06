@@ -34,6 +34,7 @@ end
 def apply_coupons(cart, coupons)
   new_hash= {}
   cart.each do |item, attributes|
+    if coupons.empty?
     # item.each do |name|
       coupons.each do |coupon|
         if coupon[:item] == item
