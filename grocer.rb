@@ -16,10 +16,11 @@ require "pry"
 
 def consolidate_cart(cart)
   new_hash = {}
-   cart.each do |item, attributes|
+   cart.each do |item|
+     item.each do |attributes|
      if attributes[:count] == nil
         attributes[:count] = 1
-        new_hash[:item] = attributes
+        new_hash[] = attributes
       else
         attributes[:count] += 1
    end
