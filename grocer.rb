@@ -39,7 +39,6 @@ def apply_coupons(cart, coupons)
         if coupon[:item] == item
           discount["#{item} W/COUPON"] = {:price => coupon[:cost], :count => attributes[:count] / coupon[:num] }
           # we want to divide the count in the cart by the num in coupons
-          binding.pry
         # end
       end
     end
