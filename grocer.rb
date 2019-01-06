@@ -43,6 +43,9 @@ def apply_coupons(cart, coupons)
            new_hash[item] = attributes
         end
       end
+    else
+      binding.pry
+      # new_hash[item] =
     end
   end
   new_hash
