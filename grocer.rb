@@ -39,6 +39,7 @@ def apply_coupons(cart, coupons)
         if coupon.value == name
           print "it worked"
       binding.pry
+        end
       end
     end
   end
