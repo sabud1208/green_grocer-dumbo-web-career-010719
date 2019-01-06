@@ -6,7 +6,10 @@ require "pry"
 
 def consolidate_cart(cart)
    cart.each do |item, attributes|
-     attributes[:count] 
+     if attributes[:count] == nil
+        attributes[:count] = 1
+      else
+        attributes[:count] += 1
    end
 end
 
