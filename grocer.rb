@@ -32,20 +32,20 @@ end
 # coupons [{:item=>"AVOCADO", :num=>2, :cost=>5.0}]
 # cart = "AVOCADO"=>{:price=>3.0, :clearance=>true, :count=>2}}
 def apply_coupons(cart, coupons)
-  discount= {}
+  new_hash= {}
   cart.each do |item, attributes|
     # item.each do |name|
       coupons.each do |coupon|
         if coupon[:item] == item
-          discount["#{item} W/COUPON"] = {:price => coupon[:cost], :count => attributes[:count] / coupon[:num], :clearance => attributes[:clearance]}
-          discount[item]= {:count => attributes[:count] %= coupon[:num], :price => attributes[:price]}
+          new_hash["#{item} W/COUPON"] = {:price => coupon[:cost], :count => attributes[:count] / coupon[:num], :clearance => attributes[:clearance]}
+          new_hash[item]= {:count => attributes[:count] %= coupon[:num], :price => attributes[:price]}
           # we want to divide the count in the cart by the num in coupons
         # end
-      else discount[item] = attributes
+      else new_hash[item] = attributes
       end
     end
   end
-  discount
+  new_hash
 end
 
 def apply_clearance(cart)
