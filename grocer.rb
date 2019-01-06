@@ -37,7 +37,7 @@ def apply_coupons(cart, coupons)
     item.each do |name, attributes|
       coupons.each do |coupon|
         if coupon[:item] == name
-          discount["#{name} W/COUPON"]
+          discount["#{name} W/COUPON"][:price]
         end
       end
     end
