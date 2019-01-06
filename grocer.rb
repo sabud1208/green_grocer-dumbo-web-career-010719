@@ -1,7 +1,12 @@
 require "pry"
+#
+# [{"TEMPEH"=>{:price=>3.0, :clearance=>true}},
+#  {"PEANUTBUTTER"=>{:price=>3.0, :clearance=>true}},
+#  {"ALMONDS"=>{:price=>9.0, :clearance=>false}}]
 
 def consolidate_cart(cart)
    cart.each do |item, attributes|
+     item[:count]
      binding.pry
    end
 end
