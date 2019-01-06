@@ -38,7 +38,6 @@ def apply_coupons(cart, coupons)
       coupons.each do |coupon|
         if coupon.value == name
           puts "it worked"
-      binding.pry
         end
       end
     end
