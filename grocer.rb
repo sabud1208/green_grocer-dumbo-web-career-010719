@@ -29,6 +29,7 @@ def consolidate_cart(cart)
   new_hash
 end
 
+# [{:item=>"AVOCADO", :num=>2, :cost=>5.0}]
 def apply_coupons(cart, coupons)
   discount= {}
   cart.each do |item|
