@@ -41,10 +41,10 @@ def apply_coupons(cart, coupons)
           new_hash[item]= {:count => attributes[:count] %= coupon[:num], :price => attributes[:price]}
          else
            new_hash[item] = attributes
+               binding.pry
         end
       end
     else
-      binding.pry
       # new_hash[item] =
     end
   end
