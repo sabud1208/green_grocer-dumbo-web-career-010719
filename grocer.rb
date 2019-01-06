@@ -17,9 +17,8 @@ require "pry"
 def consolidate_cart(cart)
   new_hash = {}
    cart.each do |item|
-     item.each do |attributes|
-       binding.pry
-     if attributes[:count] == nil
+     item.each do |name, attributes|
+      if attributes[:count] == nil
         attributes[:count] = 1
         new_hash[] = attributes
       else
